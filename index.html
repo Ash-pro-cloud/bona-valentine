@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>💘 Valentine 💘</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding-top: 120px;
+    }
+    h1 {
+      font-size: 42px;
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
+    button {
+      font-size: 22px;
+      padding: 15px 40px;
+      margin: 15px;
+      cursor: pointer;
+      border-radius: 12px;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    #noBtn {
+      background-color: #ffe3e3;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<h1>motaaa (gaindaa) 💖</h1>
+<h2>Will you be my Valentine? 🥺</h2>
+
+<button id="yesBtn" onclick="yes()">Yes 😍</button>
+<button id="noBtn" onclick="no()">No 🙄</button>
+
+<script>
+  // Kabhi Kabhi Aditi song
+  const music = new Audio(
+    "https://dl.dropboxusercontent.com/s/1x3x2f49pq6z3rb/Kabhi%20Kabhi%20Aditi.mp3?dl=0"
+  );
+
+  function yes() {
+    music.play();
+    alert("YAAAAY 💕 motaaa (gaindaa) said YES 😌💘");
+
+    setTimeout(() => {
+      window.open(
+        "https://www.youtube.com/watch?v=8C2lX8P41l4", // Kabhi Kabhi Aditi YouTube link
+        "_blank"
+      );
+    }, 1200);
+  }
+
+  function no() {
+    const noBtn = document.getElementById("noBtn");
+    noBtn.innerText = "Yes 😍";
+    noBtn.style.backgroundColor = "#ff4d6d";
+    noBtn.style.color = "white";
+    noBtn.onclick = yes;
+  }
+</script>
+
+</body>
+</html>
